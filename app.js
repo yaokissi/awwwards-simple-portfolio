@@ -3,9 +3,19 @@ import * as THREE from 'three';
 export default class Sketch {
   constructor(options) {
     this.render();
+    this.addoObjects();
     this.time = 0;
 
   }
+  addoObjects() {
+ geometry = new THREE.BoxGeometry( 0,2, 0,2, 0,2 );
+ material = new THREE.MeshNormalMaterial();
+
+ mesh = new THREE.Mesh( geometry, material );
+  scene.add(mesh);
+ 
+  }
+
   render() {
     this.time += 0.05;
     console.log(this.time);
